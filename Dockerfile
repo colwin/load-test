@@ -1,7 +1,7 @@
-FROM python:3.6-wheezy
+FROM python:3.9.1-buster
 
 # Install locust
-RUN pip install pyzmq locustio faker
+RUN pip install pyzmq locust faker
 
 ADD locustfile.py /config/locustfile.py
 ADD runLocust.sh /usr/local/bin/runLocust.sh
